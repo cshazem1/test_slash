@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_slash/core/routing/app_routers.dart';
 
 import 'constans.dart';

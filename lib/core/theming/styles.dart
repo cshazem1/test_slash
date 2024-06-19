@@ -1,37 +1,38 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constans.dart';
 
-abstract class TextStyles{
-static TextStyle  font20Black700Weight=const TextStyle(
+ class TextStyles{
+static TextStyle  font20Black700Weight= TextStyle(
   fontWeight: FontWeight.w700,
-  fontSize: 20,fontFamily: kPrimaryFont
+  fontSize: 20.sp,fontFamily: kPrimaryFont
 
 );
-static TextStyle  font14Black700Weight=const TextStyle(
+static TextStyle  font14Black700Weight= TextStyle(
     fontWeight: FontWeight.w700,
-    fontSize: 14,fontFamily: kPrimaryFont
+    fontSize: 14.sp,fontFamily: kPrimaryFont
 
 );
-static TextStyle  font14Black400Weight=const TextStyle(
+static TextStyle  font14Black400Weight= TextStyle(
     fontWeight: FontWeight.w400,
-    fontSize: 14,fontFamily: kPrimaryFont
+    fontSize: 14.sp,fontFamily: kPrimaryFont
 
 );
-static TextStyle  font22Black600Weight=const TextStyle(
+static TextStyle  font22Black600Weight= TextStyle(
     fontWeight: FontWeight.w600,
-    fontSize: 22,fontFamily: kPrimaryFont
+    fontSize: 22.sp,fontFamily: kPrimaryFont
 
 );
-static TextStyle  font14Black500Weight=const TextStyle(
+static TextStyle  font14Black500Weight= TextStyle(
     fontWeight: FontWeight.w500,
-    fontSize: 14,fontFamily: kPrimaryFont
+    fontSize: 14.sp,fontFamily: kPrimaryFont
 
 );
-static TextStyle  font16Black700Weight=const TextStyle(
+static TextStyle  font16Black700Weight= TextStyle(
     fontWeight: FontWeight.w700,
-    fontSize: 16,fontFamily: kPrimaryFont
+    fontSize: 16.dm,fontFamily: kPrimaryFont
 
 );
 }
