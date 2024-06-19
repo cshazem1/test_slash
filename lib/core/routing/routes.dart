@@ -1,5 +1,5 @@
 class Routes{
-  static String home="/";
+  static const String home="/";
 
 
 }
