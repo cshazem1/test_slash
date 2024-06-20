@@ -7,7 +7,7 @@ import '../models/product_models/product_model.dart';
 import '../models/product_models/recommended_for_you.dart';
 class ProductRepository extends HomeRepo {
   @override
-  Future<ProductModel> fetchProductsBestSelling() async {
+  Future<ProductModel> fetchProducts() async {
     String jsonString = await rootBundle.loadString(
         'assets/json/dummyData.json');
     final Map<String, dynamic> jsonResponse = json.decode(jsonString);

@@ -12,12 +12,15 @@ class ProductsCubit extends Cubit<ProductsState> {
     try {
       emit(ProductsLoading());
       final products = await getProducts();
+      print("wow");
       emit(ProductsLoaded(
           bestSelling: products.bestSelling!,
           newArrival: products.newArrival!,
           recommendedForYou: products.recommendedForYou!));
     } catch (e) {
       emit(ProductsError(e.toString()));
+      print("wow");
+
     }
   }
 }

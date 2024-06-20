@@ -9,6 +9,6 @@ class GetProducts {
   GetProducts(this.repository);
 
   Future<ProductModel> call() async {
-    return await repository.fetchProductsBestSelling();
+    return await repository.fetchProducts();
   }
 }

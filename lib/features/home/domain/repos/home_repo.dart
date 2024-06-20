@@ -6,6 +6,6 @@ import '../../data/models/product_models/product_model.dart';
 import '../../data/models/product_models/recommended_for_you.dart';
 
 abstract class HomeRepo {
-  Future<ProductModel> fetchProductsBestSelling();
+  Future<ProductModel> fetchProducts();
 
   }

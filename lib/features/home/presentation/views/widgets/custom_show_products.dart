@@ -11,10 +11,12 @@ import 'custom_row_description.dart';
 
 class CustomShowProducts extends StatelessWidget {
   const CustomShowProducts({
-    required this.textDesc,
+    required this.textDesc,required this.list,
     super.key,
   });
   final String textDesc;
+  final dynamic list;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -30,9 +32,9 @@ class CustomShowProducts extends StatelessWidget {
             height: 170.sp,
             child: ListView.builder(
               scrollDirection: axisDirectionToAxis(AxisDirection.left),
-              itemCount: 5,
+              itemCount: list.length,
               itemBuilder: (context, index) {
-                return const CustomItemShowProduct();
+                return  CustomItemShowProduct(product: list[index],);
               },
             ),
           ),

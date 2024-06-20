@@ -2,22 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:test_slash/core/theming/styles.dart';
+import 'package:test_slash/features/home/data/models/product_models/product_model.dart';
 
 import '../../../../../constans.dart';
 import '../../../../../core/theming/colors.dart';
+import '../../../domain/entities/product.dart';
 
 class CustomItemShowProduct extends StatelessWidget {
-  const CustomItemShowProduct({
+
+  const CustomItemShowProduct({required this.product,
     super.key,
   });
-
+final Product product;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.only(right: 10.sp),
+      padding:  EdgeInsets.only(right: 15.sp),
       child: SizedBox(
-        height: 170.sp,
-        width: 124.sp,
+        width: 140.sp,
         child: Column(
           children: [
             SizedBox(
@@ -25,16 +27,16 @@ class CustomItemShowProduct extends StatelessWidget {
               child: Stack(
                 children: [
                   Container(
-                    decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                    decoration:  BoxDecoration(
+                        borderRadius: const BorderRadius.all(Radius.circular(8)),
                         image: DecorationImage(
                             image:
-                                AssetImage("assets/images/best_seller_1.png"),
+                                AssetImage(product.image),
                             fit: BoxFit.fill)),
                   ),
                   Positioned(
                     top: 6.sp,
-                    left: 92.sp,
+                    left: 108.sp,
                     child: Container(
                       height: 26.sp,
                       width: 26.sp,
@@ -56,14 +58,15 @@ class CustomItemShowProduct extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Stitch Keychain",
+                  product.name,
                   style: TextStyles.font16Black400Weight,
                 ),
+                SizedBox(height: 5.sp,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "EGP 55",
+                      "EGP ${product.price}",
                       style: TextStyles.font16Black700Weight,
                     ),
                     Row(
