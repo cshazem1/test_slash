@@ -2,6 +2,7 @@ import 'package:another_carousel_pro/another_carousel_pro.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_slash/constans.dart';
 import 'package:test_slash/features/home/presentation/views/widgets/categories.dart';
 
 import '../../../../../core/theming/colors.dart';
@@ -17,8 +18,8 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 28.0, vertical: 28),
+    return  Padding(
+      padding: const EdgeInsets.symmetric( vertical: 28),
       child: SingleChildScrollView(
         child: Column(
           children: [
@@ -34,7 +35,7 @@ class HomeViewBody extends StatelessWidget {
             SizedBox(
               height: 20.spMax,
             ),
-            const Categories()
+            const Categories(textDesc: "Categories",),
           ],
         ),
       ),

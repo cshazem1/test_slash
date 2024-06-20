@@ -17,7 +17,7 @@ static TextStyle  font14Black700Weight= TextStyle(
 );
 static TextStyle  font14Black400Weight= TextStyle(
     fontWeight: FontWeight.w400,
-    fontSize: 14.sp,fontFamily: kPrimaryFont
+    fontSize: 12.sp,fontFamily: kPrimaryFont
 
 );
 static TextStyle  font22Black600Weight= TextStyle(
