@@ -1,12 +1,14 @@
+import 'package:test_slash/features/home/data/models/product_models/product_model.dart';
+
 import '../../data/models/product_models/best_selling.dart';
 import '../../data/repositories/product_repository.dart';
 
-class FetchProductsBestSelling {
+class GetProducts {
   final ProductRepository repository;
 
-  FetchProductsBestSelling(this.repository);
+  GetProducts(this.repository);
 
-  Future<List<BestSelling>> call() async {
+  Future<ProductModel> call() async {
     return await repository.fetchProductsBestSelling();
   }
 }

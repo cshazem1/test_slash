@@ -20,8 +20,8 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding: const EdgeInsets.symmetric( vertical: 28),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 28),
       child: SingleChildScrollView(
         child: Column(
           children: [
@@ -37,24 +37,30 @@ class HomeViewBody extends StatelessWidget {
             SizedBox(
               height: 20.spMax,
             ),
-            const Categories(textDesc: "Categories",),
+            const Categories(
+              textDesc: "Categories",
+            ),
             SizedBox(
               height: 20.spMax,
             ),
-            const CustomShowProducts(textDesc: "Best Selling",),
+            const CustomShowProducts(
+              textDesc: "Best Selling",
+            ),
             SizedBox(
               height: 20.spMax,
             ),
-            const CustomShowProducts(textDesc: "New Arrival",),
+            const CustomShowProducts(
+              textDesc: "New Arrival",
+            ),
             SizedBox(
               height: 20.spMax,
             ),
-            const CustomShowProducts(textDesc: "Recommended for you",),
+            const CustomShowProducts(
+              textDesc: "Recommended for you",
+            ),
           ],
         ),
       ),
     );
   }
 }
-
-
