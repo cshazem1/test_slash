@@ -9,29 +9,30 @@ import '../../../../../core/theming/colors.dart';
 import '../../../domain/entities/product.dart';
 
 class CustomItemShowProduct extends StatelessWidget {
-
-  const CustomItemShowProduct({required this.product,
+  const CustomItemShowProduct({
+    required this.product,
     super.key,
   });
-final Product product;
+  final Product product;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.only(right: 15.sp),
+      padding: EdgeInsets.only(right: 25.sp),
       child: SizedBox(
-        width: 140.sp,
+        width: 135.sp,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
               height: 116.sp,
               child: Stack(
                 children: [
                   Container(
-                    decoration:  BoxDecoration(
-                        borderRadius: const BorderRadius.all(Radius.circular(8)),
+                    decoration: BoxDecoration(
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(8)),
                         image: DecorationImage(
-                            image:
-                                AssetImage(product.image),
+                            image: AssetImage(product.image),
                             fit: BoxFit.fill)),
                   ),
                   Positioned(
@@ -54,56 +55,57 @@ final Product product;
                 ],
               ),
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            SizedBox(height: 10.spMax,),
+            Text(
+              product.name,
+              style:
+                  TextStyles.font16Black400Weight.copyWith(fontSize: 16.sp),
+            ),
+            SizedBox(
+              height: 5.sp,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  product.name,
-                  style: TextStyles.font16Black400Weight,
+                  "EGP ${product.price}",
+                  style: TextStyles.font16Black700Weight
+                      .copyWith(fontSize: 16.sp),
                 ),
-                SizedBox(height: 5.sp,),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      "EGP ${product.price}",
-                      style: TextStyles.font16Black700Weight,
+                    Container(
+                      height: 22.sp,
+                      width: 22.sp,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(500),
+                        image: const DecorationImage(
+                            image: AssetImage(
+                                "assets/images/black_friday.png"),
+                            fit: BoxFit.fill),
+                      ),
                     ),
-                    Row(
-                      children: [
-                        Container(
-                          height: 22.sp,
-                          width: 22.sp,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(500),
-                            image: const DecorationImage(
-                                image: AssetImage(
-                                    "assets/images/black_friday.png"),
-                                fit: BoxFit.fill),
-                          ),
+                    SizedBox(
+                      width: 5.sp,
+                    ),
+                    Container(
+                      height: 22.sp,
+                      width: 22.sp,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(500),
+                          color: Colors.black),
+                      child: SizedBox(
+
+                        child:  Icon(
+                          Icons.add,
+                          color: Colors.white,
+                          size: (15).sp,
+
                         ),
-                        SizedBox(
-                          width: 5.sp,
-                        ),
-                        Container(
-                          height: 22.sp,
-                          width: 22.sp,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(500),
-                              color: Colors.black),
-                          child: SizedBox(
-                            width: (8.46).sp,
-                            height: (8.46).sp,
-                            child: const Icon(
-                              Icons.add,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
                   ],
-                )
+                ),
               ],
             )
           ],

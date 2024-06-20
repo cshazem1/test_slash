@@ -17,7 +17,7 @@ final CategryModel categry;
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Padding(
-          padding:  const EdgeInsets.only(right: 6.0),
+          padding:   EdgeInsets.only(right: 12.sp),
           child: Column(
             children: [
               Container(

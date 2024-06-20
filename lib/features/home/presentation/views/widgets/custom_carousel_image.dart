@@ -14,8 +14,9 @@ class CustomCarouselImage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(
           horizontal: kPadding
-      ),      child: SizedBox(
-          height: 180.spMax,
+      ),      child: AspectRatio(
+      aspectRatio: 2.477,
+
           child: AnotherCarousel(
               dotSize: 6.0,
               dotSpacing: 15.0,

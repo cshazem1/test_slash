@@ -9,10 +9,10 @@ import 'package:test_slash/features/home/domain/use_cases/get_products.dart';
 import 'package:test_slash/features/home/presentation/manager/products_cubit/products_cubit.dart';
 import 'package:test_slash/features/home/presentation/manager/products_cubit/products_state.dart';
 import 'package:test_slash/features/home/presentation/views/widgets/categories.dart';
-import 'package:test_slash/features/home/presentation/views/widgets/custom_row_description.dart';
-
-import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
+import '../../../data/models/product_models/best_selling.dart';
+import '../../../data/models/product_models/new_arrival.dart';
+import '../../../data/models/product_models/recommended_for_you.dart';
 import 'custom_app_bar.dart';
 import 'custom_carousel_image.dart';
 import 'custom_search.dart';
@@ -25,66 +25,52 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) =>
-          ProductsCubit(GetProducts(ProductRepository()))..fetchProducts(),
-      child: BlocBuilder<ProductsCubit, ProductsState>(
-        builder: (context, state) {
-          if (state is ProductsLoaded) {
-            return Padding(
-              padding: const EdgeInsets.symmetric(vertical: 28),
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    const CustomAppBar(),
-                    SizedBox(
-                      height: 20.spMax,
-                    ),
-                    const CustomSearch(),
-                    SizedBox(
-                      height: 20.spMax,
-                    ),
-                    const CustomCarouselImage(),
-                    SizedBox(
-                      height: 20.spMax,
-                    ),
-                    const Categories(
-                      textDesc: "Categories",
-                    ),
-                    SizedBox(
-                      height: 20.spMax,
-                    ),
-                    CustomShowProducts(
-                      list: state.bestSelling,
-                      textDesc: "Best Selling",
-                    ),
-                    SizedBox(
-                      height: 20.spMax,
-                    ),
-                    CustomShowProducts(
-                      list: state.newArrival,
-                      textDesc: "New Arrival",
-                    ),
-                    SizedBox(
-                      height: 20.spMax,
-                    ),
-                    CustomShowProducts(
-                      list: state.recommendedForYou,
-                      textDesc: "Recommended for you",
-                    ),
-                  ],
-                ),
-              ),
-            );
-          } else if (state is ProductsError) {
-            Text(
-              state.message,
-              style: TextStyles.font22Black600Weight,
-            );
-          }
-
-          return const Center(child: CircularProgressIndicator());
-        },
+    final List<BestSelling> bestSelling=BlocProvider.of<ProductsCubit>(context).bestSelling;
+    final List<NewArrival> newArrival=BlocProvider.of<ProductsCubit>(context).newArrival;
+    final List<RecommendedForYou> recommendedForYou=BlocProvider.of<ProductsCubit>(context).recommendedForYou;
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 28),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            const CustomAppBar(),
+            SizedBox(
+              height: 20.spMax,
+            ),
+            const CustomSearch(),
+            SizedBox(
+              height: 20.spMax,
+            ),
+            const CustomCarouselImage(),
+            SizedBox(
+              height: 20.spMax,
+            ),
+            const Categories(
+              textDesc: "Categories",
+            ),
+            SizedBox(
+              height: 20.spMax,
+            ),
+            CustomShowProducts(
+              list: bestSelling,
+              textDesc: "Best Selling",
+            ),
+            SizedBox(
+              height: 20.spMax,
+            ),
+            CustomShowProducts(
+              list:newArrival,
+              textDesc: "New Arrival",
+            ),
+            SizedBox(
+              height: 20.spMax,
+            ),
+            CustomShowProducts(
+              list: recommendedForYou,
+              textDesc: "Recommended for you",
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -11,7 +11,8 @@ import 'custom_row_description.dart';
 
 class CustomShowProducts extends StatelessWidget {
   const CustomShowProducts({
-    required this.textDesc,required this.list,
+    required this.textDesc,
+    required this.list,
     super.key,
   });
   final String textDesc;
@@ -23,18 +24,20 @@ class CustomShowProducts extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         CustomRowDescription(text: textDesc),
-        const SizedBox(
-          height: 15,
+        SizedBox(
+          height: 15.sp,
         ),
         Padding(
           padding: const EdgeInsets.only(left: kPadding),
           child: SizedBox(
-            height: 170.sp,
+            height: 195.sp,
             child: ListView.builder(
               scrollDirection: axisDirectionToAxis(AxisDirection.left),
               itemCount: list.length,
               itemBuilder: (context, index) {
-                return  CustomItemShowProduct(product: list[index],);
+                return CustomItemShowProduct(
+                  product: list[index],
+                );
               },
             ),
           ),

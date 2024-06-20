@@ -6,8 +6,8 @@ import 'package:test_slash/features/home/presentation/views/widgets/home_view_bo
 
 import '../../../../core/theming/styles.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+class HomeViewMobile extends StatelessWidget {
+  const HomeViewMobile({super.key});
 
   @override
   Widget build(BuildContext context) {
