@@ -2,10 +2,10 @@ import 'package:test_slash/features/home/data/models/product_models/recommended_
 
 import '../../data/repositories/product_repository.dart';
 
-class FetchRecommendedForYou{
+class FetchProductRecommendedForYou{
   final ProductRepository repository;
 
-  FetchRecommendedForYou(this.repository);
+  FetchProductRecommendedForYou(this.repository);
 
   Future<List<RecommendedForYou>> call() async {
     return await repository.fetchRecommendedForYou();
