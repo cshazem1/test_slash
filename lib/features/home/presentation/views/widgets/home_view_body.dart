@@ -49,7 +49,7 @@ class HomeViewBody extends StatelessWidget {
             SizedBox(
               height: 20.spMax,
             ),
-            const CustomShowProducts(textDesc: "Recommended for you",)
+            const CustomShowProducts(textDesc: "Recommended for you",),
           ],
         ),
       ),
