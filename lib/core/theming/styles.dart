@@ -35,4 +35,9 @@ static TextStyle  font16Black700Weight= TextStyle(
     fontSize: 16.dm,fontFamily: kPrimaryFont
 
 );
+static TextStyle  font16Black400Weight= TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 16.dm,fontFamily: kPrimaryFont
+
+);
 }
