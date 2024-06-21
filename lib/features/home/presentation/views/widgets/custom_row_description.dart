@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../constans.dart';
 import '../../../../../core/theming/styles.dart';
 
 class CustomRowDescription extends StatelessWidget {
-  const CustomRowDescription({required this.text,
+  const CustomRowDescription({
+    required this.text,
     super.key,
   });
-final String text;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kPadding),
+      padding:  EdgeInsets.symmetric(horizontal: kPadding.sp),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             text,
-            style: TextStyles.font22Black600Weight,
+            style: TextStyles.font22Black600Weight.copyWith(fontSize: 22.sp),
           ),
           Row(
             children: [
@@ -25,10 +27,10 @@ final String text;
                 "See all",
                 style: TextStyles.font14Black500Weight,
               ),
-              const SizedBox(
-                width: 15,
+               SizedBox(
+                width: 15.sp,
               ),
-              const Icon(Icons.arrow_forward_ios)
+               Icon(Icons.arrow_forward_ios,size: 20.sp,)
             ],
           ),
         ],
