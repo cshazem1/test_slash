@@ -7,8 +7,9 @@
 
 # 📱 mobile Screen
 
-## 🏠 Home Screen
-![m1](https://github.com/cshazem1/test_slash/assets/90308299/13c75bdb-bcad-47f8-a39e-c89e7f1d89ed)
+## 🏠 Home Screen 
+
+![q](https://github.com/cshazem1/test_slash/assets/90308299/77c4af32-f70e-461e-ad59-5041905ac5a3)
 
 ![m3](https://github.com/cshazem1/test_slash/assets/90308299/f5093cda-8d82-4dec-b2ba-4187d1ec7a43)
 
@@ -23,5 +24,4 @@
 
 ![w2](https://github.com/cshazem1/test_slash/assets/90308299/40e5ae5b-03dd-4fe8-badc-145bb6c6da89)
 
-![w1](https://github.com/cshazem1/test_slash/assets/90308299/261c3453-a427-48a5-8805-8c5a4a73b964)
-
+![rr](https://github.com/cshazem1/test_slash/assets/90308299/52f73dfc-887f-4571-97e2-7e1c9e960fe0)
