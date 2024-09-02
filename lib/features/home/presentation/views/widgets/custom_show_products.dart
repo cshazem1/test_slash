@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:test_slash/constans.dart';
 import 'package:test_slash/core/theming/colors.dart';
+import 'package:test_slash/features/details_view/details_screen.dart';
 
 import 'custom_item_show_product.dart';
 import 'custom_row_description.dart';
